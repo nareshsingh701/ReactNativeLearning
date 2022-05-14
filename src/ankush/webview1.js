@@ -5,6 +5,10 @@ import { WebView } from 'react-native-webview';
 const URl = 'https://www.google.com/';
 
 
+
+
+
+
 class Webview1 extends Component {
     render() {
         return (
