@@ -1,31 +1,19 @@
-import { StyleSheet, Text, View, SafeAreaView, TextInput } from 'react-native'
-import React, { Component } from 'react'
-import TextInputwithState from './src/sugreev/TextInputwithState'
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 
+import NavigationComponent from './src/navigation/rootnavigations'
 
-
-
-class App extends Component {
-  render() {
-    return (
-      <SafeAreaView style={styles.container}>
-        <TextInputwithState />
-      </SafeAreaView>
-    )
-  }
-
-
+const App = () => {
+  return (
+    <View style={styles.container}>
+      <NavigationComponent />
+    </View>
+  )
 }
-
-
-
 export default App;
 
 const styles = StyleSheet.create({
-
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
+    flex: 1
   }
 })

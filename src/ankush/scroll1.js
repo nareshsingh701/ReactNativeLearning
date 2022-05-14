@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, SafeAreaView, ScrollView } from 'react-native'
 import React from 'react'
 
-export default function scroll1() {
+export default function Scroll1() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>

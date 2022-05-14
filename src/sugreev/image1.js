@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 
-export default function image1() {
+export default function ImageMaharajView() {
     return (
         <View style={styles.container}>
             <Image source={{ uri: 'https://randomuser.me/api/portraits/women/54.jpg' }} style={{ width: 70, height: 70 }} />
