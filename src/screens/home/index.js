@@ -33,6 +33,11 @@ const Home = (props) => {
                 <Text style={styles.textStyle}>Ankush2</Text>
             </TouchableOpacity>
 
+            <TouchableOpacity onPress={() => props.navigation.navigate('Screen1')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>naresh2</Text>
+            </TouchableOpacity>
+
+
 
 
         </ScrollView>

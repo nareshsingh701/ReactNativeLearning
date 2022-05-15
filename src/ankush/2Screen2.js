@@ -1,17 +1,17 @@
-import { View, Text, StyleSheet, } from 'react-native'
+import { View, Text, StyleSheet, Button } from 'react-native'
 import React, { Component } from 'react'
 
 
 
-class Screen3 extends Component {
+class Screen2 extends Component {
 
     render() {
         return (
             <View style={styles.container}>
-                <Text>I am Screen1</Text>
+                <Text>Screen2</Text>
                 <Button
                     title='Go TO screen1'
-                    onPress={() => this.props.navigation.navigate('image1')} style={styles.buttonStyle}
+                    onPress={() => this.props.navigation.navigate('Screen3')} style={styles.buttonStyle}
 
 
                 />
@@ -20,7 +20,7 @@ class Screen3 extends Component {
     }
 }
 
-export default Screen3;
+export default Screen2;
 const styles = StyleSheet.create({
     container: {
         flex: 1,

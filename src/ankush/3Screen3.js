@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, } from 'react-native'
+import { View, Text, StyleSheet, Button } from 'react-native'
 import React, { Component } from 'react'
 
 
@@ -8,7 +8,7 @@ class Screen3 extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>I am Screen1</Text>
+                <Text>Screen3</Text>
                 <Button
                     title='Go TO screen1'
                     onPress={() => this.props.navigation.navigate('image1')} style={styles.buttonStyle}

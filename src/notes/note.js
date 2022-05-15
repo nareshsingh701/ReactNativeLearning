@@ -9,8 +9,8 @@ example: npx yarn add react-native-vector-icons
 npx yarn remove "libray name"
 example: npx yarn remove react-native-vector-icons
 
-commit by naresh
-COME TO
-COME TO
+
+3. For downloading icons.
+https://icons8.com/
 
 */
