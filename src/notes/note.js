@@ -10,5 +10,6 @@ npx yarn remove "libray name"
 example: npx yarn remove react-native-vector-icons
 
 commit by naresh
+COME TO
 
 */
