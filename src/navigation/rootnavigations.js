@@ -10,6 +10,8 @@ import MyCounterApp from '../screens/counter/myCounterApp';
 import ClassCounterScreen from '../screens/counter/classCounterScreen';
 import SecondScreen from '../naresh/SecondScreen';
 import ThirdScreen from '../naresh/ThirdScreen';
+import TextInputwithState from '../sugreev/TextInputwithState'
+import WebView1 from '../sugreev/WebView1'
 const Stack = createNativeStackNavigator();
 
 const NavigationComponent = () => {
@@ -24,6 +26,8 @@ const NavigationComponent = () => {
                 <Stack.Screen name="ClassCounterScreen" component={ClassCounterScreen} />
                 <Stack.Screen name="SecondScreen" component={SecondScreen} />
                 <Stack.Screen name="ThirdScreen" component={ThirdScreen} />
+                <Stack.Screen name="TextInputwithState" component={TextInputwithState} />
+                <Stack.Screen name="WebView1" component={WebView1} />
             </Stack.Navigator>
         </NavigationContainer>
     );

@@ -5,7 +5,8 @@ import React, { Component } from 'react'
 //boolean => {}
 class TextInputwithState extends Component {
     state = {
-        mytext: 'hello world'
+        mytext: 'hello world',
+        seteditable: true
     }
     render() {
         return (
@@ -17,7 +18,11 @@ class TextInputwithState extends Component {
                     placeholder="Email"
                     placeholderTextColor="red"
                     onChangeText={(mytext) => this.setState({ mytext })}
-                    value={this.state.mytext} />
+                    value={this.state.mytext}
+                    //autoCapitalize="characters" 
+                    //autoCapitalize="words"
+                    //autoCorrect={true}
+                    returnKeyType="google" />
             </View>
         );
     }
