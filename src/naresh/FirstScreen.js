@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Button } from 'react-native'
 import React, { Component } from 'react'
 
 
@@ -6,7 +6,11 @@ class FirstScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>FirstScreen</Text>
+                <Button
+                    title='go to second screen'
+                    onPress={() => this.props.navigation.navigate('SecondScreen')} style={styles.buttonStyle}
+
+                />
             </View>
         );
     }

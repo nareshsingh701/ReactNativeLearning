@@ -1,14 +1,12 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native'
 
-
 //https://material.io/design/color/the-color-system.html#tools-for-picking-colors
 
 const Home = (props) => {
 
     const onPressButton = (screenName) => {
         props.navigation.navigate(screenName)
-        console.log(screenName);
     }
 
     return (
@@ -22,7 +20,7 @@ const Home = (props) => {
             <TouchableOpacity onPress={() => onPressButton('Scroll1')} style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Ankush</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => onPressButton('FirstScreen')} style={styles.buttonStyle}>
+            <TouchableOpacity onPress={() => onPressButton('')} style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Me</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => onPressButton('MyCounterApp')} style={[styles.buttonStyle, { backgroundColor: 'blue' }]}>
@@ -30,6 +28,9 @@ const Home = (props) => {
             </TouchableOpacity>
             <TouchableOpacity onPress={() => onPressButton('ClassCounterScreen')} style={[styles.buttonStyle, { backgroundColor: '#B71C1C' }]}>
                 <Text style={styles.textStyle}>Counter App Class Component</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => onPressButton('SecondScreen')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Auejfhk</Text>
             </TouchableOpacity>
         </ScrollView>
     )
