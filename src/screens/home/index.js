@@ -29,12 +29,12 @@ const Home = (props) => {
             </TouchableOpacity>
 
 
-            <TouchableOpacity onPress={() => props.navigation.navigate('Screen1')} style={styles.buttonStyle}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Basicpart1')} style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Ankush2</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => props.navigation.navigate('Screen1')} style={styles.buttonStyle}>
-                <Text style={styles.textStyle}>naresh2</Text>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Screens1')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Sugreev</Text>
             </TouchableOpacity>
 
 

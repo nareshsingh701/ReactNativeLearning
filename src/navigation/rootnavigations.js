@@ -16,11 +16,11 @@ import StatusBar1 from '../sugreev/StatusBar1'
 import Screen1 from '../ankush/Screen1'
 import Screen2 from '../ankush/Screen2';
 import Screen3 from '../ankush/Screen3';
-import image1 from '../ankush/image1';
+import Image1 from '../ankush/image1';
 import Basicpart1 from '../naresh/Basicpart1';
-
-
-
+import Screens1 from '../sugreev/Screens1'
+import Screens2 from '../sugreev/Screens2'
+import Screens3 from '../sugreev/Screens3';
 
 
 
@@ -45,8 +45,11 @@ const NavigationComponent = () => {
                 <Stack.Screen name="Screen1" component={Screen1} />
                 <Stack.Screen name="Screen2" component={Screen2} />
                 <Stack.Screen name="Screen3" component={Screen3} />
-                <Stack.Screen name="image1" component={image1} />
+                <Stack.Screen name="Image1" component={Image1} />
                 <Stack.Screen name="Basicpart1" component={Basicpart1} />
+                <Stack.Screen name="Screens1" component={Screens1} />
+                <Stack.Screen name="Screens2" component={Screens2} />
+                <Stack.Screen name="Screens3" component={Screens3} />
             </Stack.Navigator>
         </NavigationContainer>
     );
