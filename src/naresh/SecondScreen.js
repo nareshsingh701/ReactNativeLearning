@@ -1,11 +1,12 @@
-import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Button, Image } from 'react-native'
 import React, { Component } from 'react'
 
-
+const androidImage = require('../assets/images/android_logo.png');
 class SecondScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Image style={{ size: 25 }} source={androidImage} />
                 < Button
                     title='go to third screen'
                     onPress={() => this.props.navigation.navigate('ThirdScreen')} style={styles.buttonStyle}
@@ -20,20 +21,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
-    },
-    buttonStyle: {
-        height: 44,
-        width: '100%',
-        borderRadius: 8,
         justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'red',
-        marginTop: 16
+        backgroundColor: 'pink'
     },
-    textStyle: {
-        color: 'white',
-        fontSize: 16,
-        fontWeight: '600'
-    },
+
 });
