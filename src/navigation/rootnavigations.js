@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createDrawerNavigator } from '@react-navigation/native';
 
 import Home from '../screens/home';
 import FirstScreen from '../naresh/FirstScreen';
@@ -21,7 +22,7 @@ import Basicpart1 from '../naresh/Basicpart1';
 import Screens1 from '../sugreev/Screens1'
 import Screens2 from '../sugreev/Screens2'
 import Screens3 from '../sugreev/Screens3';
-
+import BasicLogic1 from '../sugreev/BasicLogic1';
 
 
 
@@ -50,6 +51,7 @@ const NavigationComponent = () => {
                 <Stack.Screen name="Screens1" component={Screens1} />
                 <Stack.Screen name="Screens2" component={Screens2} />
                 <Stack.Screen name="Screens3" component={Screens3} />
+                <Stack.Screen name="BasicLogic1" component={BasicLogic1} />
             </Stack.Navigator>
         </NavigationContainer>
     );

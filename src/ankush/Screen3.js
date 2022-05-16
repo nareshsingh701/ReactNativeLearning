@@ -1,17 +1,19 @@
-import { View, Text, StyleSheet, } from 'react-native'
+import { View, Text, StyleSheet, Button, Image } from 'react-native'
 import React, { Component } from 'react'
 
 
-
+const androidImage = require('../assets/images/icons8-curved-arrow-50.png');
 class Screen3 extends Component {
 
     render() {
         return (
             <View style={styles.container}>
-                <Text>I am Screen1</Text>
+                <Text>Hello</Text>
+                <Image style={{ size: 25 }} source={androidImage} />
+                <Text>Screen3</Text>
                 <Button
-                    title='Go TO screen1'
-                    onPress={() => this.props.navigation.navigate('image1')} style={styles.buttonStyle}
+                    title='Go TO Screen3'
+                    onPress={() => this.props.navigation.navigate('Image1')} style={styles.buttonStyle}
 
 
                 />

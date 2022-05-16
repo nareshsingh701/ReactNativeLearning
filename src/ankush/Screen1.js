@@ -1,23 +1,27 @@
-import { View, Text, StyleSheet, Button, Icon } from 'react-native'
+import { View, Text, StyleSheet, Button, Image } from 'react-native'
 import React, { Component } from 'react'
 
 
 
-
+const androidImage = require('../assets/images/android_logo.png');
 class Screen1 extends Component {
-    static navigationOptions = {
-        header: null,
-        tabBarIcon: ({ tintocolor }) => (
-            Icon = "icons8-home-gradient.zip"
-        )
-    }
+
+
+
+
 
     render() {
         return (
             <View style={styles.container}>
+                <Text>Screen1</Text>
+                <Image style={{ size: 25 }} source={androidImage} />
+                <Text>Screen1</Text>
+                <Button
+                    title='Go TO Screen1'
+                    onPress={() => this.props.navigation.navigate('Screen2')} style={styles.buttonStyle}
 
-                <Text>I am Screen1</Text>
-                <Icon name="icons8-home-gradient.zip" />
+
+                />
 
             </View>
         )
