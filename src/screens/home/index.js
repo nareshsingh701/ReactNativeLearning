@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableOpacity, ScrollView, } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native'
 
 //https://material.io/design/color/the-color-system.html#tools-for-picking-colors
 
@@ -35,6 +35,12 @@ const Home = (props) => {
 
             <TouchableOpacity onPress={() => props.navigation.navigate('Screens1')} style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Sugreev</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('BasicLogic1')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Sugreev1</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('BasicLogic2')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Sugreev2</Text>
             </TouchableOpacity>
 
 

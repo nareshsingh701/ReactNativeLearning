@@ -6,7 +6,7 @@ import { createDrawerNavigator } from '@react-navigation/native';
 import Home from '../screens/home';
 import FirstScreen from '../naresh/FirstScreen';
 import Scroll1 from '../ankush/scroll1';
-import ImageMaharajView from '../sugreev/image1';
+import ImageMaharajView from '../sugreev/Image2';
 import MyCounterApp from '../screens/counter/myCounterApp';
 import ClassCounterScreen from '../screens/counter/classCounterScreen';
 import SecondScreen from '../naresh/SecondScreen';
@@ -23,7 +23,7 @@ import Screens1 from '../sugreev/Screens1'
 import Screens2 from '../sugreev/Screens2'
 import Screens3 from '../sugreev/Screens3';
 import BasicLogic1 from '../sugreev/BasicLogic1';
-
+import BasicLogic2 from '../sugreev/BasicLogic2';
 
 
 const Stack = createNativeStackNavigator();
@@ -52,6 +52,7 @@ const NavigationComponent = () => {
                 <Stack.Screen name="Screens2" component={Screens2} />
                 <Stack.Screen name="Screens3" component={Screens3} />
                 <Stack.Screen name="BasicLogic1" component={BasicLogic1} />
+                <Stack.Screen name="BasicLogic2" component={BasicLogic2} />
             </Stack.Navigator>
         </NavigationContainer>
     );

@@ -6,6 +6,7 @@ class FirstScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Text style={{ fontSize: 25 }}>Naresh</Text>
                 <Image style={{ size: 25 }} source={androidImage} />
                 <Button
                     title='go to second screen'

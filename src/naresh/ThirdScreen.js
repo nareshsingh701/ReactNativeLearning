@@ -6,6 +6,7 @@ class ThirdScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
+                < Text style={{ fontSize: 25 }}>hello</Text>
                 <Image style={{ size: 10 }} source={androidImage} />
                 <Text>ThirdScreen</Text>
             </View>
