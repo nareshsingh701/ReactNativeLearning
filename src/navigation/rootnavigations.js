@@ -27,6 +27,7 @@ import BasicLogic2 from '../sugreev/BasicLogic2';
 import Viewraj from '../sugreev/Viewraj';
 import ViewAnkush from '../ankush/ViewAnkush';
 import ViewNaresh from '../naresh/ViewNaresh';
+import LearningUI from '../screens/learningUI/learningUI';
 
 const Stack = createNativeStackNavigator();
 
@@ -58,7 +59,7 @@ const NavigationComponent = () => {
                 <Stack.Screen name="Viewraj" component={Viewraj} />
                 <Stack.Screen name="ViewAnkush" component={ViewAnkush} />
                 <Stack.Screen name="ViewNaresh" component={ViewNaresh} />
-
+                <Stack.Screen name="LearningUI" component={LearningUI} />
             </Stack.Navigator>
         </NavigationContainer>
     );
