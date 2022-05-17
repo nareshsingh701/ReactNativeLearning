@@ -24,7 +24,9 @@ import Screens2 from '../sugreev/Screens2'
 import Screens3 from '../sugreev/Screens3';
 import BasicLogic1 from '../sugreev/BasicLogic1';
 import BasicLogic2 from '../sugreev/BasicLogic2';
-
+import Viewraj from '../sugreev/Viewraj';
+import ViewAnkush from '../ankush/ViewAnkush';
+import ViewNaresh from '../naresh/ViewNaresh';
 
 const Stack = createNativeStackNavigator();
 
@@ -53,6 +55,10 @@ const NavigationComponent = () => {
                 <Stack.Screen name="Screens3" component={Screens3} />
                 <Stack.Screen name="BasicLogic1" component={BasicLogic1} />
                 <Stack.Screen name="BasicLogic2" component={BasicLogic2} />
+                <Stack.Screen name="Viewraj" component={Viewraj} />
+                <Stack.Screen name="ViewAnkush" component={ViewAnkush} />
+                <Stack.Screen name="ViewNaresh" component={ViewNaresh} />
+
             </Stack.Navigator>
         </NavigationContainer>
     );

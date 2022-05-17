@@ -42,6 +42,16 @@ const Home = (props) => {
             <TouchableOpacity onPress={() => props.navigation.navigate('BasicLogic2')} style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Sugreev2</Text>
             </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Viewraj')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Sugreev3</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('ViewAnkush')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Ankush3</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('ViewNaresh')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Naresh#</Text>
+            </TouchableOpacity>
+
 
 
 
