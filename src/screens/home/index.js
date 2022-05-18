@@ -11,6 +11,9 @@ const Home = (props) => {
 
     return (
         <ScrollView style={styles.container}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Viewstyle')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Rajput</Text>
+            </TouchableOpacity>
             <TouchableOpacity onPress={() => onPressButton('LearningUI')} style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Learning UI</Text>
             </TouchableOpacity>
@@ -23,9 +26,7 @@ const Home = (props) => {
             <TouchableOpacity onPress={() => onPressButton('ClassCounterScreen')} style={[styles.buttonStyle, { backgroundColor: '#B71C1C' }]}>
                 <Text style={styles.textStyle}>Counter App Class Component</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => props.navigation.navigate('TextInputwithState')} style={styles.buttonStyle}>
-                <Text style={styles.textStyle}>TextInput By Sugreev</Text>
-            </TouchableOpacity>
+
             <TouchableOpacity onPress={() => props.navigation.navigate('Screen1')} style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Ankush2</Text>
             </TouchableOpacity>
@@ -46,6 +47,9 @@ const Home = (props) => {
             </TouchableOpacity>
             <TouchableOpacity onPress={() => props.navigation.navigate('ViewNaresh')} style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Naresh#</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Viewraj2')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Raj1</Text>
             </TouchableOpacity>
         </ScrollView>
     )

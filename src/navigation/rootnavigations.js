@@ -28,6 +28,8 @@ import Viewraj from '../sugreev/Viewraj';
 import ViewAnkush from '../ankush/ViewAnkush';
 import ViewNaresh from '../naresh/ViewNaresh';
 import LearningUI from '../screens/learningUI/learningUI';
+import Viewraj2 from '../sugreev/Viewraj2';
+import Viewstyle from '../ankush/Viewstyle'
 
 const Stack = createNativeStackNavigator();
 
@@ -60,6 +62,8 @@ const NavigationComponent = () => {
                 <Stack.Screen name="ViewAnkush" component={ViewAnkush} />
                 <Stack.Screen name="ViewNaresh" component={ViewNaresh} />
                 <Stack.Screen name="LearningUI" component={LearningUI} />
+                <Stack.Screen name="Viewraj2" component={Viewraj2} />
+                <Stack.Screen name="Viewstyle" component={Viewstyle} />
             </Stack.Navigator>
         </NavigationContainer>
     );
