@@ -14,11 +14,17 @@ const ViewNaresh = () => {
         <View style={styles.container}>
             <Text style={styles.TextStyle}>PayExim</Text>
             <Text style={{ marginLeft: 50, fontSize: 25 }}>Your daily transaction Partner</Text>
-            <Text style={styles.bestStyle}>Pay by card</Text>
 
-            <View style={styles.boxStyle}>
-                <Text style={styles.noteStyle}>Add New</Text>
+
+            <View style={styles.TextStyle2}>
+                <Text style={styles.bestStyle}>Pay by card</Text>
+                <View style={styles.boxStyle}>
+                    <Text style={styles.noteStyle}>Add New</Text>
+                </View>
+
+
             </View>
+
             <ScrollView horizontal={true}>
                 {showCard()}
                 {showCard()}
@@ -41,7 +47,7 @@ const styles = StyleSheet.create({
         width: 300,
         height: 200,
         backgroundColor: 'white',
-        marginTop: '8%',
+        marginTop: 15,
         borderRadius: 20,
         marginLeft: 20,
 
@@ -69,25 +75,33 @@ const styles = StyleSheet.create({
         marginTop: 70,
     },
     bestStyle: {
-        width: '80%',
-        height: 70,
-        marginLeft: 50,
+
+        width: 280,
+        height: 200,
+        marginLeft: 30,
         fontSize: 50,
-        marginTop: 80
+        marginTop: 80,
 
     },
     noteStyle: {
-        width: '50%',
+        width: 60,
         height: 60,
-        marginLeft: '30%',
-        color: 'red'
+        marginLeft: 10,
+        color: 'red',
+        marginTop: 14
     },
     boxStyle: {
-        width: '24%',
+        width: 75,
         height: 40,
         backgroundColor: 'pink',
-        marginLeft: '75%'
+        marginTop: 92,
+        borderRadius: 10
+
+    },
+    TextStyle2: {
+        flexDirection: 'row',
 
     }
+
 
 });

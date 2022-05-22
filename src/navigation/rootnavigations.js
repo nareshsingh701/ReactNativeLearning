@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createDrawerNavigator } from '@react-navigation/native';
-
+import { createDrawerNavigator } from '@react-navigation/native'
 import Home from '../screens/home';
 import FirstScreen from '../naresh/FirstScreen';
 import Scroll1 from '../ankush/scroll1';
@@ -30,6 +29,18 @@ import ViewNaresh from '../naresh/ViewNaresh';
 import LearningUI from '../screens/learningUI/learningUI';
 import Viewraj2 from '../sugreev/Viewraj2';
 import Viewstyle from '../ankush/Viewstyle'
+import Naresh2 from '../naresh/Naresh2';
+import Naresh3 from '../naresh/Naresh3';
+import Viewraj3 from '../sugreev/Viewraj3';
+import Viewankush1 from '../ankush/Viewankush1';
+import Login from '../screens/login/login';
+import LoginClassComponent from '../screens/login/loginClassComponent';
+import Nareshlogin from '../naresh/Nareshlogin';
+import NareshloginSecond from '../naresh/NareshloginSecond';
+import NETFLIX from '../ankush/NETFLIX';
+import Viewraj4 from '../sugreev/Viewraj4';
+
+
 
 const Stack = createNativeStackNavigator();
 
@@ -64,6 +75,16 @@ const NavigationComponent = () => {
                 <Stack.Screen name="LearningUI" component={LearningUI} />
                 <Stack.Screen name="Viewraj2" component={Viewraj2} />
                 <Stack.Screen name="Viewstyle" component={Viewstyle} />
+                <Stack.Screen name="Naresh2" component={Naresh2} />
+                <Stack.Screen name="Naresh3" component={Naresh3} />
+                <Stack.Screen name="Viewraj3" component={Viewraj3} />
+                <Stack.Screen name="Viewankush1" component={Viewankush1} />
+                <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen name="LoginClassComponent" component={LoginClassComponent} />
+                <Stack.Screen name="Nareshlogin" component={Nareshlogin} />
+                <Stack.Screen name="NETFLIX" component={NETFLIX} />
+                <Stack.Screen name="NareshloginSecond" component={NareshloginSecond} />
+                <Stack.Screen name="Viewraj4" component={Viewraj4} />
             </Stack.Navigator>
         </NavigationContainer>
     );

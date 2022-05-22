@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native'
 import React from 'react'
 
 const Viewraj2 = () => {
@@ -17,15 +17,34 @@ const Viewraj2 = () => {
             </View>
             <View style={styles.viewStyle}>
                 <Text style={styles.textStyle5}>Work</Text>
+
+
                 <View style={styles.bestStyle}>
                     <Text style={styles.textStyle6}>6</Text>
                 </View>
-
             </View>
-            <Text style={styles.textStyle7}>ideas</Text>
-            <Text style={styles.textStyle8}>2</Text>
+            <View style={styles.viewStyle}>
+                <Text style={styles.textStyle7}>Ideas</Text>
+                <Text style={styles.textStyle8}>2</Text>
+            </View>
+            <View style={styles.viewStyle}>
+                <Text style={styles.textStyle9}>Lists</Text>
+                <Text style={styles.textStyle10}>7</Text>
+            </View>
+            <View style={styles.View2}>
+                <Image resizeMode={'cover'} style={styles.Image1} source={require('../assets/images/hello1.png')} />
+
+
+                <View style={styles.Viewone}>
+                    <Image resizeMode={'cover'} style={styles.Image2} source={require('../assets/images/icons8-plus-64.png')} />
+                </View>
+            </View>
+            <View style={styles.ViewTwo}>
+                <Text style={styles.textStyle11}>Menu</Text>
+            </View>
         </View>
-    )
+
+    );
 }
 
 export default Viewraj2;
@@ -54,7 +73,8 @@ const styles = StyleSheet.create({
         fontSize: 40,
         fontWeight: 'bold',
         color: 'blue',
-        marginLeft: 80,
+        marginLeft: 75,
+        marginTop: 3,
     },
     textStyle5: {
         fontSize: 40,
@@ -66,24 +86,53 @@ const styles = StyleSheet.create({
     textStyle6: {
         fontSize: 40,
         fontWeight: 'bold',
-        color: '#fff',
-        marginLeft: 23,
-        marginTop: 12
+        color: 'red',
+        marginLeft: 20,
+        marginTop: 12,
+
 
     },
     textStyle7: {
         fontSize: 40,
         fontWeight: 'bold',
         color: 'red',
-        marginTop: 12
+        marginTop: 12,
+
 
     },
     textStyle8: {
         fontSize: 40,
         fontWeight: 'bold',
         color: 'blue',
-        marginLeft: 23,
+        marginLeft: 135,
         marginTop: 12,
+
+    },
+    textStyle9: {
+        fontSize: 40,
+        fontWeight: 'bold',
+        color: 'red',
+        marginTop: 12,
+
+
+    },
+    textStyle10: {
+        fontSize: 40,
+        fontWeight: 'bold',
+        color: 'blue',
+        marginLeft: 150,
+        marginTop: 12,
+
+    },
+    textStyle11: {
+
+        fontSize: 25,
+        height: 70,
+        color: 'red',
+        marginLeft: 50,
+
+
+
     },
     viewStyle: {
         flexDirection: 'row',
@@ -100,6 +149,32 @@ const styles = StyleSheet.create({
         borderRadius: 80
 
 
-    }
+    },
+    Image1: {
+        width: 60,
+        marginTop: 180,
+        height: 60,
+        marginLeft: 50,
 
+    },
+    Image2: {
+        width: 70,
+        marginTop: 6,
+        height: 70,
+        marginLeft: 6
+
+    },
+    View2: {
+        flexDirection: 'row',
+    },
+    Viewone: {
+        height: 80,
+        width: 80,
+        backgroundColor: 'red',
+        marginTop: 175,
+        marginLeft: 155,
+        flexDirection: 'row',
+        borderRadius: 60
+
+    }
 })

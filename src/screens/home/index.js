@@ -10,9 +10,21 @@ const Home = (props) => {
     }
 
     return (
-        <ScrollView style={styles.container}>
+        <ScrollView contentContainerStyle={styles.contentContainerStyle} style={styles.container}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('LoginClassComponent')} style={[styles.buttonStyle, { backgroundColor: 'pink' }]}>
+                <Text style={styles.textStyle}>Login Class Component Screen</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Login')} style={[styles.buttonStyle, { backgroundColor: 'pink' }]}>
+                <Text style={styles.textStyle}>Login Screen</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Naresh3')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Naresh3</Text>
+            </TouchableOpacity>
             <TouchableOpacity onPress={() => props.navigation.navigate('Viewstyle')} style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Rajput</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Naresh2')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Naresh2</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => onPressButton('LearningUI')} style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Learning UI</Text>
@@ -51,6 +63,21 @@ const Home = (props) => {
             <TouchableOpacity onPress={() => props.navigation.navigate('Viewraj2')} style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Raj1</Text>
             </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Viewraj3')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Raj2</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Viewankush1')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>rajput2</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Nareshlogin')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Nareshlogin</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('NareshloginSecond')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Nareshlogin1</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('NETFLIX')} style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>NETFLIX</Text>
+            </TouchableOpacity>
         </ScrollView>
     )
 }
@@ -60,8 +87,11 @@ export default Home;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+    },
+    contentContainerStyle: {
         paddingHorizontal: 16,
-        backgroundColor: '#ffffff'
+        backgroundColor: '#ffffff',
+        paddingBottom: 50
     },
     buttonStyle: {
         height: 44,
