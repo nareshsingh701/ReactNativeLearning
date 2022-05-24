@@ -39,6 +39,9 @@ import Nareshlogin from '../naresh/Nareshlogin';
 import NareshloginSecond from '../naresh/NareshloginSecond';
 import NETFLIX from '../ankush/NETFLIX';
 import Viewraj4 from '../sugreev/Viewraj4';
+import ActivityIndicatorNaresh from '../naresh/ActivityIndicatorNaresh';
+import ActivityIndicator1 from '../sugreev/ActivityIndicator1';
+import ActivityIndicatorAnkush from '../ankush/ActivityIndicatorAnkush';
 
 
 
@@ -50,6 +53,7 @@ const NavigationComponent = () => {
             <Stack.Navigator>
                 <Stack.Screen name="Home" component={Home} />
                 <Stack.Screen name="FirstScreen" component={FirstScreen} />
+                <Stack.Screen name="ActivityIndicatorNaresh" component={ActivityIndicatorNaresh} />
                 <Stack.Screen name="Scroll1" component={Scroll1} />
                 <Stack.Screen name="ImageMaharajView" component={ImageMaharajView} />
                 <Stack.Screen name="MyCounterApp" component={MyCounterApp} />
@@ -85,6 +89,8 @@ const NavigationComponent = () => {
                 <Stack.Screen name="NETFLIX" component={NETFLIX} />
                 <Stack.Screen name="NareshloginSecond" component={NareshloginSecond} />
                 <Stack.Screen name="Viewraj4" component={Viewraj4} />
+                <Stack.Screen name="ActivityIndicator1" component={ActivityIndicator1} />
+                <Stack.Screen name="ActivityIndicatorAnkush" component={ActivityIndicatorAnkush} />
             </Stack.Navigator>
         </NavigationContainer>
     );

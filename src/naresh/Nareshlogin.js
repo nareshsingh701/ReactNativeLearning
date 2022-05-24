@@ -24,7 +24,7 @@ const Nareshlogin = (props) => {
     }
     const onPressSignIn = () => {
         const combineEmailAndPassword = email + "    " + password + "  " + Confirmpasswoed + "  " + Username;
-        props.navigation.navigate('Basicpart1')
+        props.navigation.navigate('NareshloginSecond')
 
     }
     return (
