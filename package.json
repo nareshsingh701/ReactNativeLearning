@@ -17,7 +17,8 @@
     "clear_pod": "cd ios && rm -rf ~/Library/Caches/CocoaPods && rm -rf Pods && pod install && cd ..",
     "xcode": "xed -b ios",
     "tcp": "adb reverse tcp:8081 tcp:8081",
-    "clean": "cd android && ./gradlew clean"
+    "clean": "cd android && ./gradlew clean",
+    "postinstall": "rndebugger-open"
   },
   "dependencies": {
     "@react-navigation/native": "^6.0.10",

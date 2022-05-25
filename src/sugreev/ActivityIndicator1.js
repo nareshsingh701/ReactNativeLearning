@@ -1,107 +1,90 @@
-
-
 import React from 'react';
-import { View, Image, StyleSheet, Text } from 'react-native';
+import { StyleSheet, Button, View, SafeAreaView, Text, Alert } from 'react-native';
 
-const styles = StyleSheet.create({
-    container: {
+const Separator = () => (
+    <View style={styles.separator}>
 
-        flex: 1
-    },
-    stretch: {
-        width: 150,
-        height: 120,
-        borderRadius: 20,
+    </View>
+)
 
-    },
-    stretch1: {
-        width: 100,
-        height: 80,
-        borderRadius: 20,
+const ActivityIndicator1 = () => (
 
-    },
-    View2: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        flex: 1,
-        marginTop: 50,
+    <SafeAreaView style={styles.container}>
+        <View>
+            <Text style={styles.title}>
+                the title and onPress handler are required.it is recommended to set accessiblityLabel to help make your app usable by everyone.
+            </Text>
+            <Button
+                title='Press me'
+                onPress={() => Alert.alert('Raj is brand')}
+            />
+        </View>
+        <Separator />
+        <View>
+            <Text style={styles.title}>
+                adjust the color in a way that looks standard on each platform.On ios,the color prop controls the color off the text.On Android,the color adjust the background color off the button.
+            </Text>
+            <Button
+                title='Press me'
+                onPress={() => Alert.alert('Raj is back')}
+            />
 
-    },
-    View1: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        marginTop: 60
-    },
-    View4: {
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-        flex: 1,
-        marginTop: 50,
-
-    },
-    View3: {
-        flexDirection: 'row',
-        justifyContent: 'flex-end',
-
-    }
-
-
-});
-
-const ActivityIndicator1 = () => {
-    return (
-        <View style={styles.container}>
-            <View style={styles.View1}>
-                <Image
-                    style={styles.stretch}
-                    source={require('../assets/images/React_Native_Logo.png')}
-
+        </View>
+        <Separator />
+        <View>
+            <Text style={styles.title}>
+                All interaction for the component are disabled.
+            </Text>
+            <Button
+                disabled
+                title='Press me'
+                onPress={() => Alert.alert('hello')}
+            />
+        </View>
+        <Separator />
+        <View >
+            <Text style={styles.title} >
+                this leyout strategy lets the title define the width of the button.
+            </Text>
+            <View style={styles.Button}>
+                <Button
+                    title='Left Button'
+                    onPress={() => Alert.alert('hello word')}
                 />
-
-                <Image
-                    style={styles.stretch}
-                    source={require('../assets/images/React_Native_Logo.png')}
-                />
-            </View>
-
-
-            <View style={styles.View2}>
-                <Image
-                    style={styles.stretch1}
-                    source={require('../assets/images/React_Native_Logo.png')}
-                />
-                <Image
-                    style={styles.stretch1}
-                    source={require('../assets/images/React_Native_Logo.png')}
-                />
-
-            </View>
-            <View style={styles.View3}>
-                <Image
-                    style={styles.stretch}
-                    source={require('../assets/images/React_Native_Logo.png')}
-
-                />
-
-                <Image
-                    style={styles.stretch}
-                    source={require('../assets/images/React_Native_Logo.png')}
-                />
-            </View>
-
-
-            <View style={styles.View4}>
-                <Image
-                    style={styles.stretch1}
-                    source={require('../assets/images/React_Native_Logo.png')}
-                />
-                <Image
-                    style={styles.stretch1}
-                    source={require('../assets/images/React_Native_Logo.png')}
+                <Button
+                    title='Right Button'
+                    onPress={() => Alert.alert('Right hello')}
                 />
             </View>
         </View>
-    );
-}
+
+    </SafeAreaView>
+
+)
 
 export default ActivityIndicator1;
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        marginHorizontal: 16,
+        justifyContent: 'center'
+
+    },
+    separator: {
+        borderBottomWidth: StyleSheet.hairlineWidth,
+        borderBottomColor: 'grey',
+        marginVertical: 8
+
+    },
+    Button: {
+        justifyContent: 'space-around',
+        flexDirection: 'row'
+    },
+    title: {
+        textAlign: 'center',
+        marginVertical: 8,
+        fontSize: 20
+    }
+
+})

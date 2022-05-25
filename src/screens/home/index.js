@@ -20,7 +20,6 @@ const Home = (props) => {
             <TouchableOpacity onPress={() => props.navigation.navigate('ActivityIndicatorNaresh')} style={[styles.buttonStyle, { backgroundColor: '#e5e' }]}>
                 <Text style={styles.textStyle}> ActivityIndicatorNaresh</Text>
             </TouchableOpacity>
-
             <TouchableOpacity onPress={() => props.navigation.navigate('ActivityIndicator1')} style={[styles.buttonStyle, { backgroundColor: 'blue' }]}>
                 <Text style={styles.textStyle}> ActivityIndicator1</Text>
             </TouchableOpacity>
@@ -48,7 +47,6 @@ const Home = (props) => {
             <TouchableOpacity onPress={() => onPressButton('ClassCounterScreen')} style={[styles.buttonStyle, { backgroundColor: '#B71C1C' }]}>
                 <Text style={styles.textStyle}>Counter App Class Component</Text>
             </TouchableOpacity>
-
             <TouchableOpacity onPress={() => props.navigation.navigate('Screen1')} style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Ankush2</Text>
             </TouchableOpacity>
