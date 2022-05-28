@@ -1,41 +1,48 @@
-import React from "react";
-import { SafeAreaView, StyleSheet, TextInput } from "react-native";
+import Axios from 'axios';
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-const ActivityIndicator1 = () => {
-  const [text, onChangeText] = React.useState("Useless Text");
-  const [number, onChangeNumber] = React.useState("number");
+class ActivityIndicator1 extends Component {
+  constructor() {
+    super()
+    this.state = {
+      data: []
+    }
+  }
+  componentDidMount() { this.getapiData() }
+  async getapiData() {
+    let resp = await Axios.get('facebook.github.io/react-native/movies.Json')
+    console.warn(resp.data.movies)
+    this.setState({ data: resp.data.movies })
+  }
+  render() {
+    return (
+      <View style={styles.container}>
+        {
+          this.state.data.length > 0 ?
+            <View>
+              {
+                this.state.data.map((item) =>
+                  <Text>{item.title},{item.releaseYear}</Text>)
+              }
+            </View> : <Text>data is loading...</Text>
 
-  return (
-    <SafeAreaView>
-      <TextInput
-        style={styles.input}
-       // autoCorrect={true}
-       // clearTextOnFocus={false}
-    inlineImagePadding={38}
-          editable={true}
-        autoFocus={true}
-        onChangeText={onChangeText}
-        value={text}
-      />
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeNumber}
-        value={number}
-        placeholder="useless placeholder"
-        keyboardType="numeric"
-      />
-    </SafeAreaView>
-  );
-};
+        }
 
-const styles = StyleSheet.create({
-  input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
-  },
-});
+      </View>
+    )
+  }
+}
 
 export default ActivityIndicator1;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    margin: 50,
 
+  },
+  Text1: {
+    fontSize: 50
+  }
+
+})

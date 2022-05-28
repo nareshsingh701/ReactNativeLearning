@@ -25,14 +25,14 @@ export class LoginClassComponent extends Component {
     //https://jsonplaceholder.typicode.com/posts
     //https://dog.ceo/api/breeds/list/all
 
-    componentDidMount(){
+    componentDidMount() {
         console.log('componentDidMount');
         const url = 'https://api.spotify.com/v1/artists/0OdUWJ0sBjDrqHygGUXeCF'
-        Axios.get(url).then((response)=>{
+        Axios.get(url).then((response) => {
             const myData = response.data;
-            this.setState({result: myData.msg})
+            this.setState({ result: myData.msg })
             console.log('Axios response ', response);
-        }, (error)=>{
+        }, (error) => {
             console.log('Axios error ', error);
         })
     }
