@@ -11,7 +11,7 @@ const Home = (props) => {
 
     return (
         <ScrollView contentContainerStyle={styles.contentContainerStyle} style={styles.container}>
-            <TouchableOpacity onPress={() => props.navigation.navigate('ActivityIndicatorAnkush')} style={[styles.buttonStyle, { backgroundColor: 'pink' }]}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('ActivityIndicatorAnkush')} style={[styles.buttonStyle, { backgroundColor: 'red' }]}>
                 <Text style={styles.textStyle}>ActivityIndicatorAnkush</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => props.navigation.navigate('LoginClassComponent')} style={[styles.buttonStyle, { backgroundColor: 'pink' }]}>

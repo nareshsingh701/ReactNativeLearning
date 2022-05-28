@@ -1,41 +1,40 @@
+import { Text, View } from 'react-native'
+import React, { Component } from 'react'
+import axios from 'axios';
+class ActivityIndicatorAnkush extends React. Component {
 
-import React from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+  constructor()
+  {
+    super()
+    this.state={
+      data:[]
+    }
+  } 
+  ComponentDidMount()
+  {
+   this. getapiData()
+  }
+ async getapiData()
+ {
+let resp=await axios.get('https://api.spotify.com/v1/artists/0OdUWJ0sBjDrqHygGUXeCF')
+console.log(resp.data)
+ }
 
-const ActivityIndicatorAnkush = () => {
+  render() {
     return (
-        <View style={styles.container}>
-            <Image
+      <View style={{flex:1,marginTop:70}}>
+        {
+        this.state.data.length> 0 ?
+      <View>
+{
+  this.state.data.map((item)=>
+  <Text style={{fontSize:40}}>{item.title}</Text>)
+}
+</View>: <Text>data is loading...</Text>
+  }
 
-                style={styles.tinyLogo}
-                source={require('../assets/images/React_Native_Logo.png')}
-            />
-            <Image
-                style={styles.tinyLogo}
-                source={{
-                    uri: 'https://reactnative.dev/img/tiny_logo.png',
-                }}
-            />
-            <Image
-                style={styles.logo}
-                source={{
-                    uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
-                }}
-            />
-        </View>
-    );
+      </View>
+    )
+  }
 }
 export default ActivityIndicatorAnkush;
-const styles = StyleSheet.create({
-    container: {
-        paddingTop: 50,
-    },
-    tinyLogo: {
-        width: 50,
-        height: 50,
-    },
-    logo: {
-        width: 66,
-        height: 58,
-    },
-});

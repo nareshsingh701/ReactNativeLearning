@@ -1,5 +1,9 @@
+import Axios from 'axios';
 import React, { Component } from 'react'
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
+
+
+// Site for learning axios    https://medium.com/geekculture/learn-to-use-axios-with-react-ee92829d8ed6
 
 export class LoginClassComponent extends Component {
 
@@ -10,6 +14,27 @@ export class LoginClassComponent extends Component {
             password: "",
             result: "",
         }
+    }
+
+    //https://jsonplaceholder.typicode.com/
+    //API setup https://apidocs.imgur.com/?version=latest
+
+    //Bitcoin API https://api.coindesk.com/v1/bpi/currentprice.json
+    //Sample Image https://images.dog.ceo/breeds/pug/n02110958_14549.jpg
+    // https://jsonplaceholder.typicode.com/users
+    //https://jsonplaceholder.typicode.com/posts
+    //https://dog.ceo/api/breeds/list/all
+
+    componentDidMount(){
+        console.log('componentDidMount');
+        const url = 'https://api.spotify.com/v1/artists/0OdUWJ0sBjDrqHygGUXeCF'
+        Axios.get(url).then((response)=>{
+            const myData = response.data;
+            this.setState({result: myData.msg})
+            console.log('Axios response ', response);
+        }, (error)=>{
+            console.log('Axios error ', error);
+        })
     }
 
     onChangeEmail = (value) => {
