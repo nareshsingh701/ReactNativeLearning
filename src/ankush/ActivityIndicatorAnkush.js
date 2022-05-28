@@ -1,5 +1,5 @@
 import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import React from 'react'
 import axios from 'axios';
 class ActivityIndicatorAnkush extends React. Component {
 
@@ -16,8 +16,9 @@ class ActivityIndicatorAnkush extends React. Component {
   }
  async getapiData()
  {
-let resp=await axios.get('https://api.spotify.com/v1/artists/0OdUWJ0sBjDrqHygGUXeCF')
+let resp=await axios.get('https://dog.ceo/api/breeds/list/all')
 console.log(resp.data)
+this.setState({data:resp.data})
  }
 
   render() {
@@ -28,7 +29,7 @@ console.log(resp.data)
       <View>
 {
   this.state.data.map((item)=>
-  <Text style={{fontSize:40}}>{item.title}</Text>)
+  <Text style={{fontSize:40}}>{item.title},{item.releseYear}</Text>)
 }
 </View>: <Text>data is loading...</Text>
   }

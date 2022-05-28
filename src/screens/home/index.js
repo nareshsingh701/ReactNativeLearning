@@ -14,6 +14,9 @@ const Home = (props) => {
             <TouchableOpacity onPress={() => props.navigation.navigate('ActivityIndicatorAnkush')} style={[styles.buttonStyle, { backgroundColor: 'red' }]}>
                 <Text style={styles.textStyle}>ActivityIndicatorAnkush</Text>
             </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('NareshAxios')} style={[styles.buttonStyle, { backgroundColor: 'blue' }]}>
+                <Text style={styles.textStyle}> NareshAxios</Text>
+            </TouchableOpacity>
             <TouchableOpacity onPress={() => props.navigation.navigate('LoginClassComponent')} style={[styles.buttonStyle, { backgroundColor: 'pink' }]}>
                 <Text style={styles.textStyle}>Login Class Component Screen</Text>
             </TouchableOpacity>
@@ -22,6 +25,9 @@ const Home = (props) => {
             </TouchableOpacity>
             <TouchableOpacity onPress={() => props.navigation.navigate('ActivityIndicator1')} style={[styles.buttonStyle, { backgroundColor: 'blue' }]}>
                 <Text style={styles.textStyle}> ActivityIndicator1</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('ActivityIndicator2')} style={[styles.buttonStyle, { backgroundColor: 'green' }]}>
+                <Text style={styles.textStyle}> ActivityIndicator2</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => props.navigation.navigate('Login')} style={[styles.buttonStyle, { backgroundColor: 'pink' }]}>
                 <Text style={styles.textStyle}>Login Screen</Text>
