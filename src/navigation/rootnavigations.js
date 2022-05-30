@@ -45,6 +45,10 @@ import ActivityIndicatorAnkush from '../ankush/ActivityIndicatorAnkush';
 import ActivityIndicator2 from '../sugreev/ActivityIndicator2'
 import NareshAxios from '../naresh/NareshAxios'
 import AnkushAxios from '../ankush/AnkushAxios'
+import Naresh4 from '../naresh/Naresh4';
+
+
+
 const Stack = createNativeStackNavigator();
 
 const NavigationComponent = () => {
@@ -94,6 +98,7 @@ const NavigationComponent = () => {
                 <Stack.Screen name="ActivityIndicator2" component={ActivityIndicator2} />
                 <Stack.Screen name="NareshAxios" component={NareshAxios} />
                 <Stack.Screen name="AnkushAxios" component={AnkushAxios} />
+                <Stack.Screen name="Naresh4" component={Naresh4} />
             </Stack.Navigator>
         </NavigationContainer>
     );
