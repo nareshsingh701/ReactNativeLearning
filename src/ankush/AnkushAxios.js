@@ -1,15 +1,14 @@
-import React from 'react';
-import { View, Text, StyleSheet, } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 
-class AnkushAxios extends React.Component {
-    render() {
-        return (
-            <View>
-                <Text>hello</Text>
-            </View>
-
-        )
-    }
+const AnkushAxios = () => {
+  return (
+    <View>
+      <Text>AnkushAxios</Text>
+    </View>
+  )
 }
 
-export default AnkushAxios;
+export default AnkushAxios
+
+const styles = StyleSheet.create({})

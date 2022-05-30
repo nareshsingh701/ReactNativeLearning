@@ -14,6 +14,9 @@ const Home = (props) => {
             <TouchableOpacity onPress={() => props.navigation.navigate('AnkushAxios')} style={[styles.buttonStyle, { backgroundColor: 'red' }]}>
                 <Text style={styles.textStyle}>AnkushAxios</Text>
             </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Ankushreactnative')} style={[styles.buttonStyle, { backgroundColor: 'blue' }]}>
+                <Text style={styles.textStyle}>Ankushreactnative</Text>
+            </TouchableOpacity>
             <TouchableOpacity onPress={() => props.navigation.navigate('ActivityIndicatorAnkush')} style={[styles.buttonStyle, { backgroundColor: 'red' }]}>
                 <Text style={styles.textStyle}>ActivityIndicatorAnkush</Text>
             </TouchableOpacity>

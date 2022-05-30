@@ -9,12 +9,25 @@ export class LoginClassComponent extends Component {
 
     constructor(props) {
         super(props)
+        console.log('constructor Called');
         this.state = {
             email: "",
             password: "",
             result: "",
         }
     }
+
+    componentDidMount() {
+        console.log('componentDidMount Called');
+    }
+    componentWillUnmount() {
+        console.log('componentWillUnmount Called');
+    }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('componentDidUpdate Called');
+    }
+
+
 
     //https://jsonplaceholder.typicode.com/
     //API setup https://apidocs.imgur.com/?version=latest
@@ -25,17 +38,17 @@ export class LoginClassComponent extends Component {
     //https://jsonplaceholder.typicode.com/posts
     //https://dog.ceo/api/breeds/list/all
 
-    componentDidMount() {
-        console.log('componentDidMount');
-        const url = 'https://api.spotify.com/v1/artists/0OdUWJ0sBjDrqHygGUXeCF'
-        Axios.get(url).then((response) => {
-            const myData = response.data;
-            this.setState({ result: myData.msg })
-            console.log('Axios response ', response);
-        }, (error) => {
-            console.log('Axios error ', error);
-        })
-    }
+    // componentDidMount() {
+    //     console.log('componentDidMount');
+    //     const url = 'https://api.spotify.com/v1/artists/0OdUWJ0sBjDrqHygGUXeCF'
+    //     Axios.get(url).then((response) => {
+    //         const myData = response.data;
+    //         this.setState({ result: myData.msg })
+    //         console.log('Axios response ', response);
+    //     }, (error) => {
+    //         console.log('Axios error ', error);
+    //     })
+    // }
 
     onChangeEmail = (value) => {
         this.setState({ email: value })
@@ -44,11 +57,12 @@ export class LoginClassComponent extends Component {
         this.setState({ password: value })
     }
     onPressSignIn = () => {
-        const combineEmailAndPassword = this.state.email + "    " + this.state.password;
-        this.setState({ result: combineEmailAndPassword })
+        // const combineEmailAndPassword = this.state.email + "    " + this.state.password;
+        this.setState({ result: "hello" })
     }
 
     render() {
+        console.log('render Called');
         return (
             <View style={styles.container}>
                 <Text style={styles.loginText}>Please Enter Email And Password</Text>
@@ -67,7 +81,9 @@ export class LoginClassComponent extends Component {
                     placeholder={"Password"}
                     placeholderTextColor={'gray'}
                 />
-                <TouchableOpacity disabled={this.state.email.length <= 5 || this.state.password.length <= 5} onPress={this.onPressSignIn} style={styles.loginButton}>
+                <TouchableOpacity
+                    // disabled={this.state.email.length <= 5 || this.state.password.length <= 5}
+                    onPress={this.onPressSignIn} style={styles.loginButton}>
                     <Text style={styles.buttonText}>Sign In</Text>
                 </TouchableOpacity>
                 <Text style={styles.resultStyle}>{this.state.result}</Text>
