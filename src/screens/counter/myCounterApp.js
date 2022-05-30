@@ -1,20 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+
+//Custom Imports
+import { increase, decrease } from '../../redux/action/counterAction';
 
 const MyCounterApp = () => {
 
-    const [counter, setCounter] = useState(0);
+    const dispatch = useDispatch();
+    const { value } = useSelector((state) => state.counter);
 
     const onPressClickMe = () => {
-        setCounter(counter + 1)
+        dispatch(increase())
     }
     const onPressGhataDoClickMe = () => {
-        setCounter(counter - 1)
+        dispatch(decrease())
     }
 
     return (
         <View style={styles.mainContainer}>
-            <Text style={styles.counterText}>{counter}</Text>
+            <Text style={styles.counterText}>{value}</Text>
             <TouchableOpacity onPress={onPressClickMe} style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Badha Do Mujhe</Text>
             </TouchableOpacity>
