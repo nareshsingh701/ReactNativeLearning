@@ -1,25 +1,13 @@
 import React, { useCallback } from "react";
-import { Button, Linking, StyleSheet, View } from "react-native";
+import { Button, Linking, StyleSheet, View,Text } from "react-native";
 
-const OpenSettingsButton = ({ children }) => {
-  const handlePress = useCallback(async () => {
-    // Open the custom settings if the app has one
-    await Linking.openSettings();
-  }, []);
+const Ankushreactnative=()=>{
+  return(
+<View>
+  <Text>hello</Text>
+</View>
 
-  return <Button title={children} onPress={handlePress} />;
-};
-
-const Ankushreactnative = () => {
-  return (
-    <View style={styles.container}>
-      <OpenSettingsButton>Open Settings</OpenSettingsButton>
-    </View>
-  );
-};
-
-const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center" },
-});
+  )
+}
 
 export default Ankushreactnative;

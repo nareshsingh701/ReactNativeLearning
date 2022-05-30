@@ -1,23 +1,23 @@
+import { connect } from 'react-redux';
 import React, { Component } from 'react'
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
 
+//Custom Imports
+import { increase, decrease } from '../../redux/action/counterAction';
+
 class ClassCounterScreen extends Component {
 
-    state = {
-        counter: 0
-    }
-
     onPressClickMe = () => {
-        this.setState({ counter: this.state.counter + 1 })
+        this.props.increaseTheValue()
     }
     onPressGhataDoClickMe = () => {
-        this.setState({ counter: this.state.counter - 1 })
+        this.props.decreaseTheValue()
     }
 
     render() {
         return (
             <View style={styles.mainContainer}>
-                <Text style={styles.counterText}>{this.state.counter}</Text>
+                <Text style={styles.counterText}>{this.props.counter.value}</Text>
                 <TouchableOpacity onPress={this.onPressClickMe} style={styles.buttonStyle}>
                     <Text style={styles.textStyle}>Badha Do Mujhe</Text>
                 </TouchableOpacity>
@@ -29,7 +29,24 @@ class ClassCounterScreen extends Component {
     }
 }
 
-export default ClassCounterScreen;
+
+const mapStateToProps = (state) => {
+    return {
+        counter: state.counter,
+    };
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        increaseTheValue: () => {
+            dispatch(increase());
+        },
+        decreaseTheValue: () => {
+            dispatch(decrease());
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(ClassCounterScreen);
 
 const styles = StyleSheet.create({
     mainContainer: {
