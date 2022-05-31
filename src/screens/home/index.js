@@ -20,6 +20,12 @@ const Home = (props) => {
             <TouchableOpacity onPress={() => props.navigation.navigate('AnkushAxios')} style={[styles.buttonStyle, { backgroundColor: 'red' }]}>
                 <Text style={styles.textStyle}>AnkushAxios</Text>
             </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('classRedux')} style={[styles.buttonStyle, { backgroundColor: 'pink' }]}>
+                <Text style={styles.textStyle}>classRedux</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('functionRedux')} style={[styles.buttonStyle, { backgroundColor: 'pink' }]}>
+                <Text style={styles.textStyle}>functionRedux</Text>
+            </TouchableOpacity>
             <TouchableOpacity onPress={() => props.navigation.navigate('Ankushreactnative')} style={[styles.buttonStyle, { backgroundColor: 'blue' }]}>
                 <Text style={styles.textStyle}>Ankushreactnative</Text>
             </TouchableOpacity>
