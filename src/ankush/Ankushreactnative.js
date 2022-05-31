@@ -1,13 +1,14 @@
-import React, { useCallback } from "react";
-import { Button, Linking, StyleSheet, View,Text } from "react-native";
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 
-const Ankushreactnative=()=>{
-  return(
-<View>
-  <Text>hello</Text>
-</View>
-
+const Ankushreactnative = () => {
+  return (
+    <View>
+      <Text>Ankushreactnative</Text>
+    </View>
   )
 }
 
-export default Ankushreactnative;
+export default Ankushreactnative
+
+const styles = StyleSheet.create({})
