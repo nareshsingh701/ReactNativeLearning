@@ -49,6 +49,7 @@ import Ankushreactnative from '../ankush/Ankushreactnative'
 import Basicpart3 from '../ankush/Basicpart3'
 import Button1 from '../ankush/button1'
 import UsersFunctionalComponent from '../screens/users/usersFunctionalComponent';
+import ankushTextTheButton from '../ankush/ankushTextTheButton'; 
 
 
 
@@ -106,6 +107,7 @@ const NavigationComponent = () => {
                 <Stack.Screen name="Basicpart3" component={Basicpart3} />
                 <Stack.Screen name="Button1" component={Button1} />
                 <Stack.Screen name="UsersFunctionalComponent" component={UsersFunctionalComponent} />
+                <Stack.Screen name="ankushTextTheButton" component={ankushTextTheButton} />
             </Stack.Navigator>
         </NavigationContainer>
     );
