@@ -14,6 +14,9 @@ const Home = (props) => {
             <TouchableOpacity onPress={() => props.navigation.navigate('UsersFunctionalComponent')} style={[styles.buttonStyle, { backgroundColor: 'skyblue' }]}>
                 <Text style={styles.textStyle}>Users Functional Component</Text>
             </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('PostId')} style={[styles.buttonStyle, { backgroundColor: 'blue' }]}>
+                <Text style={styles.textStyle}>postId</Text>
+            </TouchableOpacity>
             <TouchableOpacity onPress={() => props.navigation.navigate('Button1')} style={[styles.buttonStyle, { backgroundColor: 'blue' }]}>
                 <Text style={styles.textStyle}>Button1</Text>
             </TouchableOpacity>
@@ -26,8 +29,8 @@ const Home = (props) => {
             <TouchableOpacity onPress={() => props.navigation.navigate('classRedux')} style={[styles.buttonStyle, { backgroundColor: 'pink' }]}>
                 <Text style={styles.textStyle}>classRedux</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => props.navigation.navigate('functionRedux')} style={[styles.buttonStyle, { backgroundColor: 'pink' }]}>
-                <Text style={styles.textStyle}>functionRedux</Text>
+            <TouchableOpacity onPress={() => props.navigation.navigate('FunctionRedux')} style={[styles.buttonStyle, { backgroundColor: 'green' }]}>
+                <Text style={styles.textStyle}>FunctionRedux</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => props.navigation.navigate('Ankushreactnative')} style={[styles.buttonStyle, { backgroundColor: 'blue' }]}>
                 <Text style={styles.textStyle}>Ankushreactnative</Text>

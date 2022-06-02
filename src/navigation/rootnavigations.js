@@ -49,6 +49,8 @@ import Ankushreactnative from '../ankush/Ankushreactnative'
 import Basicpart3 from '../ankush/Basicpart3'
 import Button1 from '../ankush/button1'
 import UsersFunctionalComponent from '../screens/users/usersFunctionalComponent';
+import PostId from '../naresh/postId';
+import FunctionRedux from '../sugreev/FunctionRedux';
 
 
 
@@ -105,7 +107,9 @@ const NavigationComponent = () => {
                 <Stack.Screen name="Ankushreactnative" component={Ankushreactnative} />
                 <Stack.Screen name="Basicpart3" component={Basicpart3} />
                 <Stack.Screen name="Button1" component={Button1} />
+                <Stack.Screen name="PostId" component={PostId} />
                 <Stack.Screen name="UsersFunctionalComponent" component={UsersFunctionalComponent} />
+                <Stack.Screen name="FunctionRedux" component={FunctionRedux} />
             </Stack.Navigator>
         </NavigationContainer>
     );
